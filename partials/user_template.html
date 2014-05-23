@@ -1,0 +1,35 @@
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    	<tr>
+		<th>
+			Username
+		</th>
+		<th>
+			Email
+		</th>
+		<th>
+			Date
+		</th>
+		<th>
+			Source
+		</th>
+	</tr>
+</thead>
+ 	<tr data-ng-repeat="r in results">
+	  	<td>
+	  		{{r.userCookie}}
+	  	</td>
+	  	<td>
+	  		{{r.userEmail}}
+	  	</td>
+	  	<td>
+	  		{{ r.date | date:'medium'}}
+	  	</td>
+	  	<td>
+	  		{{r.source}}
+	  	</td>
+
+	</tr>
+</table>
