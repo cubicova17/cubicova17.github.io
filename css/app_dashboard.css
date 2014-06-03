@@ -109,3 +109,10 @@ a.active{
 table thead th:hover{
   cursor: pointer;
 }
+td{
+  word-break: break-all;
+}
+th{
+  word-break: none;
+  white-space: nowrap;
+}

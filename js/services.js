@@ -9,7 +9,7 @@ angular.module('cohortioApp.services', []).
   value('version', '0.1').
   service('monthService',  function() {
   
-  	this.month = 1;
+  	this.month = (new Date()).getMonth() + 1; //as monthes start from 0
 
   	this.selectMonth = function(m) {
       this.month = m;

@@ -1,0 +1,33 @@
+  <table class="table table-striped" style="">
+    <thead>
+    	<tr>
+		<th>
+			Source 
+		</th>
+		<th ng-click="sort = 'COUNT'">
+			Counter  <span ng-show="sort == 'COUNT'">&#8595;</span>
+		</th>
+		<th ng-click="sort = 'REQUEST'">
+			Requests (%) <span ng-show="sort == 'REQUEST'">&#8595;</span>
+		</th>
+		<th ng-click="sort = 'PAYMENT'">
+			Payments (%) <span ng-show="sort == 'PAYMENT'">&#8595;</span>
+		</th>
+	</tr>
+</thead>
+ 	<tr data-ng-repeat="s in sourceStats">
+	  	<td>
+	  		{{ s.source || s.location }}
+	  	</td>
+	  	<td>
+	  		{{ s.COUNT }}
+	  	</td>
+	  	<td>
+	  		{{ s.REQUEST }} ({{ (s.REQUEST / s.COUNT * 100).toFixed(2) }}%)
+	  	</td>
+	  	<td>
+	  		{{ s.PAYMENT }} ({{ (s.PAYMENT / s.COUNT * 100).toFixed(2) }}%)
+	  	</td>
+
+	</tr>
+</table>
